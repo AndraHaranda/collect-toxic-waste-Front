@@ -11,3 +11,4 @@
   ![Bootstrap](https://img.shields.io/badge/-Bootstrap-%232c3e50?style=flat-square&logo=Bootstrap)
   ![Git](https://img.shields.io/badge/-Git-%232c3e50?style=flat-square&logo=git)
   ![Angular](https://img.shields.io/badge/-Angular-%232c3e50?style=flat-square&logo=angularjs)
+  ![TypeScript](https://img.shields.io/badge/-TypeScript-%232c3e50?style=flat-square&logo=TypeScript)
