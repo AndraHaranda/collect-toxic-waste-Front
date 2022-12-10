@@ -4,6 +4,8 @@ import { PrincipalComponent } from './containers/principal/principal.component';
 import { LoginComponent } from './containers/login/login.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ProdutosComponent } from './containers/produtos/produtos.component';
+import { PontosColetaComponent } from './containers/pontos-coleta/pontos-coleta.component';
 
 const routes: Routes = [
   {
@@ -17,15 +19,19 @@ const routes: Routes = [
   },
   {
     path:'principal',
-    component:PrincipalComponent,
-    //CanActivate, protege a rota, caso tente acessar sem fazer login.
-    canActivate:[ProtegeRotas]
+    component:PontosColetaComponent,
   },
   {
     path:'realizar-cadastro',
     component: CadastrarUsuarioComponent,
-    //CanActivate, protege a rota, caso tente acessar sem fazer login.
-    canActivate:[ProtegeRotas]
+  },
+  {
+    path:'cadastrar-ponto-coleta',
+    component: ProdutosComponent,
+  },
+  {
+    path:'artigos',
+    component: PrincipalComponent,
   },
 ];
 

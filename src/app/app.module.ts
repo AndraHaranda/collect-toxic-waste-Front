@@ -10,13 +10,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { PrincipalComponent } from './containers/principal/principal.component';
 import { CadastrarUsuarioComponent } from './containers/cadastrar-usuario/cadastrar-usuario.component';
+import { ProdutosComponent } from './containers/produtos/produtos.component';
+import { PontosColetaComponent } from './containers/pontos-coleta/pontos-coleta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     PrincipalComponent,
-    CadastrarUsuarioComponent
+    CadastrarUsuarioComponent,
+    ProdutosComponent,
+    PontosColetaComponent
   ],
   imports: [
     CommonModule,

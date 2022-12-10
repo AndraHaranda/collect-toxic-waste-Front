@@ -1,26 +1,42 @@
-<app-nav [rota_cadastro]="true"></app-nav>
-<div class="row justify-content-center mt-5 fundo">
+<app-nav [cadastro_user_active]="true"></app-nav>
+<div class="container">
+  <br><br>
+  <div class="row">
+      <div class="col-md-12">
+          <p class="fonte_verde">Cadastro de Usuários</p>
+      </div>
+      <div class="col-md-6">
+          <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nome</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">E-mail</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">CPF</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Telefone</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3 form-check">
+              </div>
+              <div class="row">
+                  <div class="col-md-3">
 
-  <div class="col-md-5">
-    <img src="../../../assets/Imagens/logo.png" alt="" class="img-logo-ctw">
+                      <button type="submit" style="width: 1160px;" class="btn btn-success">Cadastrar</button>
+                  </div>
+              </div>
+          </form>
   </div>
 
-  <form [formGroup]="form_cadastro" class="col-md-6 ms-5 mt-5">
-    <div class="col-md-8">
-      <label for="nomeCompleto" class="form-label">Nome:</label>
-      <input type="text" class="form-control" formControlName="nome" id="nomeCompleto">
-    </div>
-    <div class="col-md-8">
-      <label for="email" class="form-label">Email:</label>
-      <input type="text" class="form-control" formControlName="email" id="email">
-    </div>
-    <div class="col-md-8">
-      <label for="senha" class="form-label">Senha:</label>
-      <input type="password" class="form-control" formControlName="senha" id="senha">
-    </div>
-    <button class="col-md-8 mt-3 btn btn-primary"  routerLinkActive="router-link-active" (click)="cadastrar()" >Login</button>
-  </form>
-
+  <div class="col-md-6 mt-5">
+      <img src="../../../assets/Imagens/reciclagem.png" alt="" style="margin-left: 50px; width:250px" height="250px">
+  </div>
 </div>
 <app-modal [showModal]="showModal" [modalContent]="modalContent" (toggleModal)="fechaModal()"></app-modal>
 <app-spinner [showSpinner]="showSpinner"></app-spinner>

@@ -30,7 +30,11 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.showSpinner = true;
+    setTimeout(() => {
 
+      this.router.navigate(['principal'])
+    }, 1000);
+    return
     let nome = this.formLogin.value.nome
     let senha = this.formLogin.value.senha
 

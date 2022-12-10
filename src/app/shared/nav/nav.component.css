@@ -1,3 +1,33 @@
 .img-logo{
   width: 150px;
 }
+.fonte_verde{
+  font-size: 45px;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  color: #198754;
+  margin-left: 7rem;
+  text-align: center;
+}
+.artigos{
+  height: 75px;
+  background-image: linear-gradient(#73bd9f, #e2e7e5);
+  border-bottom: 2px solid #198754;
+}
+
+.navbar-cor{
+  background-image: linear-gradient(#198754, #73bd9f);
+
+}
+
+.navbar-cor_1{
+  background-image: linear-gradient(#198754, #73bd9f, #73bd9f, #e2e7e5);
+
+}
+
+.fonte_navbar{
+  color: rgb(236, 234, 234);
+  font-size: 1.5rem;
+  font-style: oblique;
+  text-decoration: underline;
+}

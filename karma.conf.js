@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/Inventory'),
+      dir: require('path').join(__dirname, './coverage/collect-toxic-wate'),
       subdir: '.',
       reporters: [
         { type: 'html' },

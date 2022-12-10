@@ -1,0 +1,36 @@
+<div *ngIf="show_navbar">
+  <app-nav [pontos_coleta_active]="true"></app-nav>
+
+</div>
+<div style="width: 100%; height:55px; background: #198754;">
+</div>
+<div class="artigos">
+    <p style="color: #198754; font-size: 2rem; margin-left: 2rem; text-align: center;">
+
+        Pontos de Coleta
+    </p>
+</div>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let ponto_coleta of pontos_coleta" class="col-md-3" style="margin-top: 2rem; margin-right: 5rem;">
+            <div class="card" style="width: 20rem;height: 39rem; max-height: 39rem;">
+                <img [src]="ponto_coleta.image" class="card-img-top" style="min-height:300px; max-height: 300px;" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ ponto_coleta.title }}</h5>
+                  <p style="font-size: small;" [innerHTML]="ponto_coleta.descricao"></p>
+                  <div style="position: absolute; bottom: 1rem; right: 1rem;">
+                    <a [href]="ponto_coleta.link" target="_blank" class="btn btn-success">Saiba mais!</a>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center;">Informações retiradas como referência do site da Prefeitura Municipal de Araxá</p>
+    <p style="text-align: center;">
+        <a href="https://www.araxa.mg.gov.br/noticia/5719/novo-cronograma-da-coleta-de-materiais-reciclaveis-contempla-todas-as-regioes-de-araxa#:~:text=%2D%20SETOR%20NORTE%3A%20Morada%20do%20Sol,Teixeira%20e%20Cincinato%20de%20%C3%81vila.&text=%2D%20SETOR%20LESTE%3A%20Recanto%20do%20Bosque,e%202%20e%20Residencial%20Vit%C3%B3ria" target="_blank" >
+            Acesse aqui
+        </a>
+    </p>
+</div>
+
+<app-spinner [showSpinner]="showSpinner"></app-spinner>

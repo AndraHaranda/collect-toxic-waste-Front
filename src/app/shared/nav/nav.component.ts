@@ -8,8 +8,13 @@ import { Router } from '@angular/router';
 })
 export class NavComponent implements OnInit {
 
-  @Input() rota_mapa: boolean = false;
-  @Input() rota_cadastro: boolean = false;
+  @Input() login_active: boolean = false;
+  @Input() cadastro_user_active: boolean = false;
+  @Input() cadastro_points_active: boolean = false;
+  @Input() pontos_coleta_active: boolean = false;
+  @Input() artigos_active: boolean = false;
+  @Input() usuario_logado: boolean = true;
+
   usuarioLogado: string = ''
   constructor(private router: Router) { }
 

@@ -1,3 +1,76 @@
-<p>
-  produtos works!
-</p>
+<app-nav [cadastro_points_active]="true"></app-nav>
+<div class="container">
+  <br /><br />
+  <div class="row">
+    <div class="col-md-12">
+      <p class="fonte_verde">Cadastro de Ponto de Coleta</p>
+      <p class="fonte_verde" style="text-align: center">Pessoa Física DPS</p>
+    </div>
+    <div class="col-md-6">
+      <form>
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Nome</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">CPF/CNPJ</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Telefone</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label"
+            >Tipo Material</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div class="mb-3 form-check"></div>
+        <div class="row">
+          <div class="col-md-3">
+            <button type="submit" style="width: 1160px" class="btn btn-success">
+              Cadastrar
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6">
+      <form action="">
+        <label for="exampleInputPassword1" class="form-label"
+          >Selecione a Localização no Mapa:</label
+        >
+      </form>
+
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3759.1273739943035!2d-46.95638698400071!3d-19.579042996490916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b03732129c99bd%3A0x8d9f98e260186e9b!2zVU5JQVJBWMOB!5e0!3m2!1spt-BR!2sbr!4v1667429681402!5m2!1spt-BR!2sbr"
+          width="500"
+          height="300"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>

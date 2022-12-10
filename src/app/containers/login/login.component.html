@@ -1,24 +1,49 @@
-<div class="fundo mt-5">
+<app-nav [login_active]="true" [usuario_logado]="false"></app-nav>
+<div style="background-color: rgb(248, 246, 246);" class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="col-md-6" style="margin-top: 10rem">
+        <img src="../../../assets/Imagens/reciclagem.png" alt="" style="margin-left: 50px; width: 250px" height="250px"/>
+      </div>
 
-  <div class="row justify-content-center mt-5 fundo">
-
-    <div class="col-md-5">
-      <img src="../../../assets/Imagens/logo.png" alt="" class="img-logo-ctw">
+      <div class="col-md-12">
+        <img src="./imagens/login.png" alt="" style="width: 400px; cursor: pointer"/>
+      </div>
     </div>
 
-    <form [formGroup]="formLogin" class="col-md-6 ms-5 mt-5">
-      <div class="col-md-8">
-        <label for="nomeCompleto" class="form-label">Usuario:</label>
-        <input type="text" class="form-control" formControlName="nome" id="nomeCompleto">
-      </div>
-      <div class="col-md-8">
-        <label for="senha" class="form-label">Senha:</label>
-        <input type="password" class="form-control" formControlName="senha" id="senha">
-      </div>
-      <button class="col-md-8 mt-3 btn btn-primary"  routerLinkActive="router-link-active" (click)="login()" >Login</button>
-    </form>
+    <div class="col-md-6" style="margin-top: 10rem">
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Nome</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+            </div>
 
-    <app-modal [showModal]="showModal" [modalContent]="modalContent" (toggleModal)="fechaModal()"></app-modal>
-    <app-spinner [showSpinner]="showSpinner"></app-spinner>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1"/>
+            </div>
+
+            <div class="mb-3 form-check"></div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <button (click)="login()" style="width: 550px" class="btn btn-success">
+                  <a  style="color: inherit">
+                    Entrar
+                  </a>
+                </button>
+              </div>
+              <p class="mt-3" style="color: #198754">Esqueceu a senha?</p>
+              <p class="mt-3" style="color: #198754">Cadastre-se</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
+<app-modal [showModal]="showModal" [modalContent]="modalContent" (toggleModal)="fechaModal()"></app-modal>
+<app-spinner [showSpinner]="showSpinner"></app-spinner>

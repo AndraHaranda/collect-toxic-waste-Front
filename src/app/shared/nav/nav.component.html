@@ -1,23 +1,43 @@
-<nav class="navbar navbar-light bg-dark">
+<nav class="navbar bg-light fixed-top navbar-cor">
   <div class="container-fluid">
-    <img src="../../../assets/Imagens/logo.png" class="img-logo" href="#"/>
-    <span class="navbar-brand text-white" >Olá {{ usuarioLogado }} !! <br>
-    </span>
-
-    <p class="text-white"></p>
-    <p class="text-white"></p>
-    <p class="text-white"></p>
-    <p class="text-white"></p>
-    <p class="text-white"></p>
-    <p class="text-white"></p>
-    <span *ngIf="!rota_mapa" class="navbar-brand text-white" style="cursor: pointer;" routerLink="/principal">Visualizar Mapa<br>
-    </span>
-    <span *ngIf="!rota_cadastro" class="navbar-brand text-white" style="cursor: pointer;" routerLink="/realizar-cadastro">Realizar Cadastro</span>
-    <a class="navbar-brand text-white" style="cursor: pointer;" (click)="logout()">Sair
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-power" viewBox="0 0 16 16">
-        <path d="M7.5 1v7h1V1h-1z"/>
-        <path d="M3 8.812a4.999 4.999 0 0 1 2.578-4.375l-.485-.874A6 6 0 1 0 11 3.616l-.501.865A5 5 0 1 1 3 8.812z"/>
-      </svg>
-    </a>
+    <a class="navbar-brand" style="color: black;" href="#">Collect Toxic Waste</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end navbar-cor_1" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Collect Toxic Waste</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+              <a class="nav-link active fonte_navbar" [ngClass]="{active: login_active}" aria-current="page" [routerLink]="['/']">Realizar Login</a>
+          </li>
+          <li class="nav-item" *ngIf="usuario_logado">
+              <a class="nav-link active fonte_navbar" [ngClass]="{active: pontos_coleta_active}" aria-current="page" [routerLink]="['/principal']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fonte_navbar" [ngClass]="{active: cadastro_points_active}" [routerLink]="['/cadastrar-ponto-coleta']">Cadastrar Ponto de Coleta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fonte_navbar" [ngClass]="{active: cadastro_user_active}" [routerLink]="['/realizar-cadastro']">Cadastrar Novo Usuário</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fonte_navbar" [ngClass]="{active: artigos_active}" [routerLink]="['/artigos']">Ler Artigos</a>
+          </li>
+        </ul>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 mt-5">
+          <li>
+            <button [routerLink]="['/']" style="background: none; border: none;">
+              Sair
+              <img src="../../../assets/Icones/logout.png" alt="icone para sair" style="max-width: 25px;">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>
